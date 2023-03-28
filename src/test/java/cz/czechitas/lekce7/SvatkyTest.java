@@ -1,5 +1,6 @@
 package cz.czechitas.lekce7;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.time.Month;
@@ -28,6 +29,10 @@ class SvatkyTest {
   @Test
   void jeVSeznamu() {
     //TODO Otestovat, že najde v seznamu existující jméno a nenajde neexistující jméno
+    Svatky svatky = new Svatky();
+    assertTrue(svatky.jeVSeznamu("Nataša"));
+    assertFalse(svatky.jeVSeznamu("Eva"));
+    assertFalse(svatky.jeVSeznamu("Lukáš"));
   }
 
   /**
@@ -36,6 +41,7 @@ class SvatkyTest {
   @Test
   void getPocetJmen() {
     //TODO Otestovat, že vrací počet jmen, která máme v seznamu
+
   }
 
   /**
