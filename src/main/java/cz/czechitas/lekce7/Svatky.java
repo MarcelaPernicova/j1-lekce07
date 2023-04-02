@@ -50,6 +50,7 @@ public class Svatky {
     svatky.put("Maxim", MonthDay.of(5, 29));
     svatky.put("Ferdinand", MonthDay.of(5, 30));
     svatky.put("Kamila", MonthDay.of(5, 31));
+
   }
 
   /**
@@ -64,6 +65,7 @@ public class Svatky {
 
   /**
    * Vrací informaci, zda je dané jméno uvedeno v seznamu.
+   *
    * @param jmeno Hledané jméno.
    * @return {@code true}, pokud je jméno v seznamu. Jinak vrací {@code false}.
    */
@@ -97,10 +99,9 @@ public class Svatky {
    */
   public void pridatSvatek(String jmeno, MonthDay denMesic) {
     //TODO
-    svatky.put("Laura",MonthDay.of(1,6));
+    svatky.put(jmeno,denMesic);
 
-    svatky.put("Tamara", MonthDay.of(6,3));
-    svatky.put("Kevin", MonthDay.of(Month.JUNE,3));
+
   }
 
   /**
@@ -111,7 +112,7 @@ public class Svatky {
    */
   public void pridatSvatek(String jmeno, int den, int mesic) {
     //TODO
-    svatky.put("Jarmil", MonthDay.of(Month.JUNE,2));
+    svatky.put(jmeno, MonthDay.of(mesic,den));
   }
 
   /**
@@ -122,7 +123,7 @@ public class Svatky {
    */
   public void pridatSvatek(String jmeno, int den, Month mesic) {
     //TODO
-    svatky.put("Tamara", MonthDay.of(6,3));
+    svatky.put(jmeno, MonthDay.of(mesic,den));
   }
 
   /**
@@ -131,6 +132,6 @@ public class Svatky {
    */
   public void smazatSvatek(String jmeno) {
     //TODO
-    svatky.clear();
+    svatky.remove(jmeno);
   }
 }
